@@ -12,3 +12,8 @@ iptables -t mangle -A PREROUTING -s <Omnik IP> -p tcp -j TEE --gateway <Sniffer 
 This require iptables-mod-tee to be installed.
 
 Run program as root (because scapy sniffer requires root privileges to open a raw port).
+
+Requires python-daemon to be installed. Get this via pip:
+```
+sudo pip2 install python-daemon
+```
