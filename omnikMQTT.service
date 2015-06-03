@@ -4,7 +4,7 @@ Requires=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/python /opt/OmnikMQTT/OmnikMQTT.py
+ExecStart=/usr/bin/python /opt/OmnikMQTT/OmnikMQTT.py
 Restart=on-failure
 
 [Install]

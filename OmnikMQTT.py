@@ -8,7 +8,6 @@ import sys
 import signal
 import logging
 import ConfigParser, os
-import daemon
 import paho.mqtt.publish as publish
 import sniffer
 
