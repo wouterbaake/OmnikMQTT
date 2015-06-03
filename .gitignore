@@ -56,3 +56,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Own config file
+config.cfg
