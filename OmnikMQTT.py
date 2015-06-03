@@ -32,18 +32,9 @@ def MQTTcallback(pkt):
 
         
 if __name__ == "__main__":
-
-    logger = logging.getLogger(__name__)
-    hdlr = logging.FileHandler(log_filename)
-    formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-    hdlr.setFormatter(formatter)
-    logger.addHandler(hdlr) 
-    logger.setLevel(logging.DEBUG)
-    
-    # Load the setting file
     mydir = os.path.dirname(os.path.abspath(__file__))
     config = ConfigParser.RawConfigParser()
-    logger.debug("Reading config file")
+    # Load the setting file
     config.read([mydir + '/config-org.cfg', mydir + '/config.cfg'])
     
     ip              = config.get("inverter","ip")
@@ -56,8 +47,14 @@ if __name__ == "__main__":
     mqtt_host       = config.get('mqtt','mqtt_host')
     mqtt_port       = config.get('mqtt','mqtt_port')
     mqtt_topic      = config.get('mqtt','mqtt_topic')
-
-
+    
+    logger = logging.getLogger(__name__)
+    hdlr = logging.FileHandler(log_filename)
+    formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+    hdlr.setFormatter(formatter)
+    logger.addHandler(hdlr) 
+    logger.setLevel(logging.DEBUG)
+    
     msg = InverterMsg.InverterMsg()
 
     logging.getLogger("scapy.runtime").setLevel(logging.ERROR) # Suppress warning messages from Scapy
