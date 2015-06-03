@@ -40,7 +40,6 @@ if __name__ == "__main__":
     ip              = config.get("inverter","ip")
     sniff_iface     = config.get("inverter",'sniff_iface')
 
-    log_enabled     = config.getboolean('log','log_enabled')
     log_filename    = mydir + '/' + config.get('log','log_filename')
 
     mqtt_enabled    = config.getboolean('mqtt','mqtt_enabled')

@@ -1,0 +1,11 @@
+[Unit]
+Description=OmnikMQTT daemon
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/python /opt/OmnikMQTT/OmnikMQTT.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
