@@ -12,3 +12,5 @@ iptables -t mangle -A PREROUTING -s <Omnik IP> -p tcp -j TEE --gateway <Sniffer 
 This require iptables-mod-tee to be installed.
 
 Run program as root (because scapy sniffer requires root privileges to open a raw port).
+
+This software is based on https://github.com/Woutrrr/Omnik-Data-Logger
