@@ -1,3 +1,4 @@
+[![Travis-CI Build Status](https://travis-ci.org/wouterbaake/OmnikMQTT.svg)](https://travis-ci.org/wouterbaake/OmnikMQTT.svg)
 # OmnikMQTT
 
 This program is intended for OmnikSol PV inverters with a wifi datalogger card that has a serial number that starts with 601. These wifi dataloggers do not have the ability to respond to http requests as the later models, but send out the data to Omnikportal.com every 5 minutes. This software is intended to sniff these packets and extract the PV information. The data is then reported via MQTT.
