@@ -12,6 +12,12 @@ iptables -t mangle -A PREROUTING -s <Omnik IP> -p tcp -j TEE --gateway <Sniffer 
 
 This require iptables-mod-tee to be installed.
 
-Run program as root (because scapy sniffer requires root privileges to open a raw port).
+Steps to run program:
+- Clone repository
+- Edit config-org.cfg and rename to config.cfg
+- Edit your router configuration to ensure that packages from the inverter are redirected or duplicated to the IP address of your logger (refer to router manual how to do this, or use command stated above)
+- Run "sudo python3 OmnikMQTT.py &"
+
+Run program as root because scapy sniffer requires root privileges to open a raw port.
 
 This software is based on https://github.com/Woutrrr/Omnik-Data-Logger
