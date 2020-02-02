@@ -13,6 +13,8 @@ iptables -t mangle -A PREROUTING -s <Omnik IP> -p tcp -j TEE --gateway <Sniffer 
 This require iptables-mod-tee to be installed.
 
 Steps to run program:
+- Have Python3 installed
+- Install Scapy (https://scapy.readthedocs.io/en/latest/installation.html)
 - Clone repository
 - Edit config-org.cfg and rename to config.cfg
 - Edit your router configuration to ensure that packages from the inverter are redirected or duplicated to the IP address of your logger (refer to router manual how to do this, or use command stated above)
